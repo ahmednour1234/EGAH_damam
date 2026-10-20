@@ -184,7 +184,7 @@
   @media (min-width: 820px) { .nav ul { display: flex; } }
 
   /* ---------- Hero ---------- */
-  .hero { min-height: 100svh; display: flex; align-items: flex-end; --img: url("images/hero.jpg"); }
+  .hero { min-height: 100svh; display: flex; align-items: flex-end; --img: url("images/interior.jpg"); }
   .hero::after { content: ""; position: absolute; inset: 0; background:
     linear-gradient(90deg, rgba(20,18,15,.78) 0%, rgba(20,18,15,.45) 35%, rgba(20,18,15,0) 70%),
     linear-gradient(180deg, rgba(20,18,15,.55) 0%, rgba(20,18,15,.1) 40%, rgba(20,18,15,.85) 100%); }
@@ -268,12 +268,13 @@
   :root[lang="ar"] .feel p { font-size: 16px; letter-spacing: 0; }
   .duo { display: grid; grid-template-columns: 1.25fr 1fr; gap: 12px; }
   .duo .photo { aspect-ratio: 3 / 4; }
-  .duo .photo:first-child { --img: url("images/dish.jpg"); }
-  .duo .photo:last-child  { --img: url("images/coffee.jpg"); margin-top: 36px; }
+  .duo .photo { aspect-ratio: 4 / 5; }
+  .duo .photo:first-child { --img: url("images/seabass.jpg"); }
+  .duo .photo:last-child  { --img: url("images/tiramisu.jpg"); margin-top: 36px; }
   @media (min-width: 820px) { .feel .wrap { grid-template-columns: .9fr 1.1fr; align-items: center; } }
 
   /* ---------- Hours ---------- */
-  .hours { min-height: 78svh; display: flex; align-items: flex-start; --img: url("images/sunset.jpg"); }
+  .hours { min-height: 78svh; display: flex; align-items: flex-start; --img: url("images/terrace.jpg"); }
   .hours::after { content: ""; position: absolute; inset: 0; background:
     linear-gradient(90deg, rgba(20,18,15,.72) 0%, rgba(20,18,15,.25) 55%, transparent 80%),
     linear-gradient(180deg, rgba(20,18,15,.8) 0%, rgba(20,18,15,.2) 55%, rgba(20,18,15,.7) 100%); }
@@ -312,11 +313,11 @@
     [dir="rtl"] .socials a:hover svg { transform: scaleX(-1) translate3d(3px, -3px, 0); }
   }
   .socials a:active { background: rgba(197,141,86,.08); transform: scale(.985); }
-  .closer .photo { aspect-ratio: 4 / 3; --img: url("images/lounge.jpg"); }
+  .closer .photo { aspect-ratio: 4 / 5; max-height: 640px; --img: url("images/interior.jpg"); }
   @media (min-width: 820px) { .closer .wrap { grid-template-columns: 1fr 1fr; align-items: center; } }
 
   /* ---------- Sea + footer ---------- */
-  .sea { --img: url("images/sea.jpg"); }
+  .sea { --img: url("images/terrace.jpg"); }
   .sea::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,18,15,.75) 0%, rgba(20,18,15,.3) 40%, rgba(20,18,15,.85) 68%, rgba(20,18,15,.98) 100%); }
   .sea .wrap { position: relative; z-index: 1; padding-block: 72px 28px; }
   .sea .ring { margin: 36px 0 64px; }
@@ -420,7 +421,7 @@
 </header>
 
 <main id="top">
-  <section class="hero photo slow sunset" data-slides="hero.jpg,lounge.jpg,sea.jpg,sunset.jpg" data-interval="6500">
+  <section class="hero photo slow sunset" data-slides="interior.jpg,terrace.jpg" data-interval="6500">
     <div class="wrap">
       <span class="logo intro" style="--d:100ms"><img src="images/logo-512.png" alt="EGAH logo"></span>
       <span class="eyebrow intro" style="--d:150ms" data-i18n="eyebrow">EGAH &nbsp;·&nbsp; Al Khobar</span>
@@ -443,8 +444,8 @@
         <p class="reveal" data-i18n="feelText">A moment worth slowing down for.</p>
       </div>
       <div class="duo">
-        <div class="photo dish reveal" role="img" aria-label="EGAH signature dishes" data-slides="dish.jpg,prawn.jpg,dessert.jpg" data-interval="5500"></div>
-        <div class="photo pour reveal" role="img" aria-label="Arabic coffee, dallah and dates" data-slides="coffee.jpg,dessert.jpg" data-interval="7000"></div>
+        <div class="photo dish reveal" role="img" aria-label="EGAH signature dishes: filet seabass, calamari and shrimp, beef burger" data-slides="seabass.jpg,calamari.jpg,burger.jpg" data-interval="5500"></div>
+        <div class="photo pour reveal" role="img" aria-label="Pancake tiramisu and chicken burger at EGAH" data-slides="tiramisu.jpg,chicken-burger.jpg" data-interval="7000"></div>
       </div>
     </div>
   </section>
@@ -468,11 +469,11 @@
           <li><a class="reveal" href="https://www.facebook.com/profile.php?id=61595356824503" target="_blank" rel="noopener"><span class="n">04</span><span class="lbl">Facebook</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
         </ul>
       </div>
-      <div class="photo night reveal" role="img" aria-label="Lantern-lit seaside lounge at EGAH" data-slides="lounge.jpg,hero.jpg" data-interval="7500"></div>
+      <div class="photo night reveal" role="img" aria-label="EGAH dining room overlooking the sea"></div>
     </div>
   </section>
 
-  <footer class="sea photo slow night" data-slides="sea.jpg,lounge.jpg" data-interval="8000">
+  <footer class="sea photo slow night" data-slides="terrace.jpg,interior.jpg" data-interval="8000">
     <div class="wrap">
       <h2 class="display md split reveal" data-i18n="seaTitle">See you<br>by the sea.</h2>
       <a class="ring reveal" href="tel:+966555676216" data-i18n="reserveRing">Reserve<br>a table</a>
