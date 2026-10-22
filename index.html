@@ -327,6 +327,15 @@
   .contacts a:hover { color: var(--copper-light); }
   .contacts svg { flex: none; width: 15px; height: 15px; color: var(--copper); }
   @media (min-width: 720px) { .contacts { grid-template-columns: repeat(3, auto); justify-content: space-between; } }
+  .qr { display: none; }
+  @media (hover: hover) and (min-width: 820px) {
+    .qr { display: flex; align-items: center; gap: 18px; width: max-content; margin-top: 30px; padding: 12px 22px 12px 12px; border: 1px solid rgba(197,141,86,.35); background: rgba(20,18,15,.55); transition: border-color .3s ease; }
+    [dir="rtl"] .qr { padding: 12px 12px 12px 22px; }
+    .qr:hover { border-color: var(--copper-light); }
+    .qr img { width: 96px; height: 96px; background: #fff; padding: 4px; }
+    .qr b { display: block; font: 400 20px/1.2 var(--serif); color: var(--white); margin-bottom: 4px; }
+    .qr small { display: block; font-size: 13px; color: var(--muted); max-width: 26ch; }
+  }
   .sign { margin-top: 36px; display: flex; align-items: center; gap: 18px; }
   .sign::before, .sign::after { content: ""; flex: 1; height: 1px; background: var(--line); }
   .sign + small { display: block; text-align: center; margin-top: 14px; font-size: 11px; letter-spacing: .2em; color: var(--muted); }
@@ -412,9 +421,9 @@
 <header class="nav">
   <a class="brand intro" style="--d:0ms" href="#top" aria-label="EGAH"><span class="logo"><img src="images/logo-512.png" alt=""></span><span class="word">EGAH</span></a>
   <ul class="intro" style="--d:120ms">
+    <li><a href="#connect" data-i18n="navConnect">Connect</a></li>
     <li><a href="#experience" data-i18n="navExp">Our Experience</a></li>
     <li><a href="#hours" data-i18n="navHours">Our Hours</a></li>
-    <li><a href="#connect" data-i18n="navConnect">Connect</a></li>
   </ul>
   <button class="lang intro" style="--d:160ms" type="button" lang="ar" aria-label="Switch language">عربي</button>
   <a class="pill intro" style="--d:200ms" href="tel:+966555676216" data-i18n="reserveTable">Reserve a table</a>
@@ -429,8 +438,24 @@
       <p class="sub intro" style="--d:480ms" data-i18n="heroSub">Fine dining, with a view of the Arabian Gulf.</p>
       <div class="actions intro" style="--d:620ms">
         <a class="ring" href="tel:+966555676216" data-i18n="reserveNow">Reserve<br>now</a>
-        <a class="scroll-cue" href="#experience" data-i18n="explore">Explore</a>
+        <a class="scroll-cue" href="#connect" data-i18n="explore">Explore</a>
       </div>
+    </div>
+  </section>
+
+  <section class="closer" id="connect">
+    <div class="wrap">
+      <div>
+        <h2 class="display md split reveal" data-i18n="closerTitle">A little closer.</h2>
+        <ul class="socials" dir="ltr">
+          <li><a class="reveal" href="https://www.instagram.com/egahrestaurants" target="_blank" rel="noopener"><span class="n">01</span><span class="lbl">Instagram</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
+          <li><a class="reveal" href="https://www.tiktok.com/@egah.restaurant.c" target="_blank" rel="noopener"><span class="n">02</span><span class="lbl">TikTok</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
+          <li><a class="reveal" href="https://snapchat.com/t/bDQKYPhf" target="_blank" rel="noopener"><span class="n">03</span><span class="lbl">Snapchat</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
+          <li><a class="reveal" href="https://www.facebook.com/profile.php?id=61595356824503" target="_blank" rel="noopener"><span class="n">04</span><span class="lbl">Facebook</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
+          <li><a class="reveal" href="https://maps.app.goo.gl/c2zhGYJmhzQAriEw7" target="_blank" rel="noopener"><span class="n">05</span><span class="lbl" data-i18n="location">Location</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="photo night reveal" role="img" aria-label="EGAH dining room overlooking the sea"></div>
     </div>
   </section>
 
@@ -458,30 +483,19 @@
     </div>
   </section>
 
-  <section class="closer" id="connect">
-    <div class="wrap">
-      <div>
-        <h2 class="display md split reveal" data-i18n="closerTitle">A little closer.</h2>
-        <ul class="socials" dir="ltr">
-          <li><a class="reveal" href="https://www.instagram.com/egahresturant" target="_blank" rel="noopener"><span class="n">01</span><span class="lbl">Instagram</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
-          <li><a class="reveal" href="https://www.tiktok.com/@egah.restaurant.c" target="_blank" rel="noopener"><span class="n">02</span><span class="lbl">TikTok</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
-          <li><a class="reveal" href="https://snapchat.com/t/bDQKYPhf" target="_blank" rel="noopener"><span class="n">03</span><span class="lbl">Snapchat</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
-          <li><a class="reveal" href="https://www.facebook.com/profile.php?id=61595356824503" target="_blank" rel="noopener"><span class="n">04</span><span class="lbl">Facebook</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></li>
-        </ul>
-      </div>
-      <div class="photo night reveal" role="img" aria-label="EGAH dining room overlooking the sea"></div>
-    </div>
-  </section>
-
   <footer class="sea photo slow night" data-slides="terrace.jpg,interior.jpg" data-interval="8000">
     <div class="wrap">
       <h2 class="display md split reveal" data-i18n="seaTitle">See you<br>by the sea.</h2>
       <a class="ring reveal" href="tel:+966555676216" data-i18n="reserveRing">Reserve<br>a table</a>
       <div class="contacts reveal">
         <a href="tel:+966555676216"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><span dir="ltr">055 567 6216</span></a>
-        <a href="https://maps.google.com/?q=Al+Sahil,+Street+3,+Building+3098,+Al+Khobar+34611" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="address">Al Sahil, St. 3, Bldg 3098, Al Khobar 34611</span></a>
+        <a href="https://maps.app.goo.gl/c2zhGYJmhzQAriEw7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="address">Al Sahil, St. 3, Bldg 3098, Al Khobar 34611</span></a>
         <a href="mailto:egahresturant@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span dir="ltr">egahresturant@gmail.com</span></a>
       </div>
+      <a class="qr reveal" href="tel:+966555676216">
+        <img src="images/qr-call.svg" alt="QR code to call EGAH" width="96" height="96">
+        <span><b data-i18n="qrTitle">Scan to call</b><small data-i18n="qrText">Point your phone camera to call us and reserve</small></span>
+      </a>
       <div class="sign"><span class="logo" style="--s:56px"><img src="images/logo-512.png" alt="EGAH logo"></span></div>
       <small data-i18n="footer">Restaurant &amp; Cafe · Al Khobar</small>
     </div>
@@ -507,6 +521,8 @@
       closerTitle: 'A little closer.', seaTitle: 'See you<br>by the sea.', reserveRing: 'Reserve<br>a table',
       address: 'Al Sahil, St. 3, Bldg 3098, Al Khobar 34611', footer: 'Restaurant &amp; Cafe · Al Khobar',
       marquee: 'Taste<em>✦</em>View<em>✦</em>Feel<em>✦</em>Al Khobar<em>✦</em>Arabian Gulf<em>✦</em>',
+      location: 'Location',
+      qrTitle: 'Scan to call', qrText: 'Point your phone camera to call us and reserve',
       toggle: 'عربي', toggleLang: 'ar'
     },
     ar: {
@@ -521,6 +537,8 @@
       closerTitle: 'أقرب إليكم.', seaTitle: 'نراكم<br>على البحر.', reserveRing: 'احجز<br>طاولة',
       address: 'حي الساحل، شارع 3، مبنى 3098، الخبر 34611', footer: 'مطعم وكافيه · الخبر',
       marquee: 'تذوّق<em>✦</em>تأمّل<em>✦</em>استمتع<em>✦</em>الخبر<em>✦</em>الخليج العربي<em>✦</em>',
+      location: '<span lang="ar" style="font-family:\'IBM Plex Sans Arabic\',sans-serif">الموقع</span>',
+      qrTitle: 'امسح للاتصال', qrText: 'وجّه كاميرا جوالك للاتصال بنا والحجز',
       toggle: 'EN', toggleLang: 'en'
     }
   };
